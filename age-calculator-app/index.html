@@ -7,29 +7,47 @@
     FrontEnd Mentor | Age Calculator App
   </title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/age-calculator-app-main/assets/images/favicon-32x32.png"">
+  <link rel="icon" href="/age-calculator-app-main/assets/images/favicon-32x32.png">
+  <link rel="text/css" href="https://fonts.google.com/specimen/Poppins">
 </head>
-<body>
+<body></body>
   <div class="main-container">
     <div class="input-container">
-      <label for="year">Year</label>
-        <input type="number" placeholder="DD">
-      
-        <label for="month">Month</label>
-      
-        <input type="number" placeholder="MM">
-        <input type="number" placeholder="YYYY">
+      <form onsubmit="return false">
+      <div class="input-items">
+       
+        <h2 class="type" >DAY</h2>
+        <input type="number" min="1" max="31" id="day" placeholder=" DD" required>
+      </div>
+      <div class="input-items">
+        <h2 class="type" >MONTH</h2>
+        <input type="number" min="1" max="12" id="month" placeholder=" MM" required>
+      </div>
+      <div class="input-items">
+        <h2 class="type" >YEAR</h2>
+        <input type="number" min="1" max="9999" id="year" placeholder=" YYYY" required>
+      </div>
+   
     </div>
     <div class="submit-container">
       <div class="line-div"></div>
-      <div class="submit-btn"></div>
+      
+        <button id="btn"type="submit" class="submit-btn"  ><img src="/frontend-mentor-challenges/age-calculator-app/assets/images/icon-arrow.svg"> </button>
+      
     </div>
+  </form>
     <div class="result-container">
-      <h1 id="day">-- Days</h1>
-      <h1 id="months">-- Months</h1>
-      <h1 id="year">---- Year</h1>
+      <div class="result-item">
+        <h1 id="day"><span id="days">--</span>days</h1>
+        <h1 id="month"><span id="months">--</span>months</h1>
+        <h1 id="year"><span id="years">--</span>years</h1>
+      </div>
     </div>
   </div>
   
+
+
+
+  <script src="script.js"></script>
 </body>
 </html>
